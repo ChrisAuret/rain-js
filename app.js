@@ -3,7 +3,7 @@ var raindrops = [];
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  for (var i = 0; i < 100; i++) {
+  for (var i = 0; i < 500; i++) {
     raindrops.push(new Raindrop())
   }
 }
