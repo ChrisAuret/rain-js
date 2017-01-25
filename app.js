@@ -1,11 +1,19 @@
+var raindrops = [];
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
-}
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  for (var i = 0; i < 100; i++) {
+    raindrops.push(new Raindrop())
+  }
 }
 
 function draw() {
+  background(230, 230, 250);
 
+  for (var i = 0; i < raindrops.length; i++) {
+    raindrops[i].update();
+    raindrops[i].draw();
+    raindrops[i].edges();
+  }
 }
